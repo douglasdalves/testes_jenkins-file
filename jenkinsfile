@@ -1,0 +1,17 @@
+pepiline {
+    agent any
+
+    stages {
+        stage('STAGE 00'){
+            steps{
+                echo "Pipeline de teste"
+            }
+        }
+    
+        stage('STAGE 01'){
+            steps{
+                echo "Pipeline jenkins"
+            }
+        } 
+    }
+}
