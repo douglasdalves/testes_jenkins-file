@@ -1,17 +1,21 @@
-pepiline {
+pipeline {
     agent any
 
     stages {
-        stage('STAGE 00'){
-            steps{
-                echo "Pipeline de teste"
+        stage('Build') {
+            steps {
+                echo 'Building..'
             }
         }
-    
-        stage('STAGE 01'){
-            steps{
-                echo "Pipeline jenkins de test"
+        stage('Test') {
+            steps {
+                echo 'Testing..'
             }
-        } 
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
