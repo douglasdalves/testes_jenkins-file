@@ -10,7 +10,7 @@ pepiline {
     
         stage('STAGE 01'){
             steps{
-                echo "Pipeline jenkins"
+                echo "Pipeline jenkins de test"
             }
         } 
     }
