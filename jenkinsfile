@@ -14,6 +14,9 @@ pipeline {
     }
     stages {
         stage('Build') {
+            environment {
+                GITHUB_COMMON_CREDS = credentials('login-github')
+            }
             steps {
                 echo 'Building..'
             }
