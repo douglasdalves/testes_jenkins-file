@@ -33,7 +33,12 @@ pipeline {
               }
             }
             steps {
-                echo 'Deploying....'
+                withCredentials([sshUserPrivateKey(credentialsId: 'chave-ssh-wsl', \
+                                                   keyFileVariable: 'acesso-wsl-not', \
+                                                   passphraseVariable: 'acesso-wsl-not', \
+                                                   usernameVariable: 'douglas')]) {
+                // some block
+                }
             }
         }
     }
