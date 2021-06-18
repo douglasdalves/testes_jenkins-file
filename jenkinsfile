@@ -43,7 +43,7 @@ pipeline {
                 //Parâmetros de manuseio
                 }
                 //sh 'printenv'
-                sh('echo ${STATEMENT}')
+                sh('echo ${TESTE}')
             }
         }
     }
