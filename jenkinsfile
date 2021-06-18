@@ -1,6 +1,16 @@
 pipeline {
     agent any
     environment {
+        // Using returnStdout
+        CC = """${sh(
+                returnStdout: true,
+                script: 'echo "clang"'
+            )}""" 
+        // Using returnStatus
+        EXIT_STATUS = """${sh(
+                returnStatus: true,
+                script: 'exit 1'
+            )}"""
         string(name: 'STATEMENT', defaultValue: 'hello; ls /', description: 'What should I say?')
     }
     stages {
@@ -33,7 +43,7 @@ pipeline {
                 //Parâmetros de manuseio
                 }
                 //sh 'printenv'
-                sh("echo ${STATEMENT}")
+                sh('echo ${STATEMENT}')
             }
         }
     }
