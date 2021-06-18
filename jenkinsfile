@@ -11,7 +11,7 @@ pipeline {
                 returnStatus: true,
                 script: 'exit 1'
             )}"""
-        string(name: 'STATEMENT', defaultValue: 'hello; ls /', description: 'What should I say?')
+        TESTE = string(name: 'STATEMENT', defaultValue: 'hello; ls /', description: 'What should I say?')
     }
     stages {
         stage('Build') {
