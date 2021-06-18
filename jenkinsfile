@@ -38,7 +38,9 @@ pipeline {
                                                    passphraseVariable: 'acesso-wsl-not', \
                                                    usernameVariable: 'douglas')]) {
                 // some block
+                //Injeção via interpolação
                 }
+                sh 'printenv'
             }
         }
     }
